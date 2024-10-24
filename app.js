@@ -24,10 +24,10 @@ mongoose.connect(mongoURI)
 
 // Método POST para nuestro servidor (Insertar un nuevo contenido)
 app.post('/content', async (req, res) => {
-const { name, content } = req.body;
+const { name, content, pelicula } = req.body;
 
 try {
-const newContent = new Content({ name, content });
+const newContent = new Content({ name, content, pelicula });
 await newContent.save();
 res.status(201).send(newContent);
 } catch (err) {
