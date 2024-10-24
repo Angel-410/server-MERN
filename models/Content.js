@@ -11,6 +11,9 @@ content: {
     type: String,
     required: true,
 },
+pelicula: {
+    type: String,
+}
 // Puedes agregar los campos que sea, revisa los tipos de BSON para saber qué agregar
 });
 
